@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
-import { AiFillAlert, AiFillAmazonCircle } from "react-icons/ai";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen">
+    <main className="max-w-full min-h-screen">
       <Header />
+      <Hero />
     </main>
   );
 }

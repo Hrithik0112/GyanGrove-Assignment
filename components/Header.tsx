@@ -9,7 +9,7 @@ const categoryList = ["Live Shows", "Streams", "Movies", "Plays", "Events", "Spo
 
 const Header = () => {
   return (
-    <div className="flex flex-col text-gray-600 text-base mx-10 mt-5">
+    <div className="flex flex-col text-gray-600 text-base mx-10 my-5">
       {/* search section  */}
       <div className="flex justify-between items-center ">
         {/* logo */}
