@@ -14,3 +14,9 @@ export const formatDate = (dateString: string) => {
   const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "2-digit" };
   return date.toLocaleDateString("en-US", options);
 };
+
+export function convertMetersToKilometers(distanceInMeters: number): number {
+  // Convert meters to kilometers with two decimal places
+  const distanceInKilometers = distanceInMeters / 1000;
+  return parseFloat(distanceInKilometers.toFixed(2));
+}

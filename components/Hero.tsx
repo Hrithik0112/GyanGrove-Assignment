@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ShowCard from "./ShowCard";
 import { RecommendedShow } from "@/lib/types";
+import EventsSection from "./EventsSection";
 
 const Secret = process.env.NEXT_PUBLIC_AZURE_SECRET;
 
@@ -78,6 +79,9 @@ const Hero = () => {
             events.map((show: RecommendedShow) => <ShowCard key={show.eventName} show={show} />)}
         </Slider>
       </div>
+
+      {/* upcoing events */}
+      <EventsSection />
     </div>
   );
 };
