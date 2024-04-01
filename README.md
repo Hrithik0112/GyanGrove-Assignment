@@ -1,6 +1,16 @@
 # GyanGrove Frontend Assignment
 
 This project is a website built using Next.js, Tailwind CSS, and TypeScript. The main goal is to create a platform that displays upcoming and recommended events fetched from provided APIs. The website is designed to be responsive, ensuring a seamless experience across various screen sizes, including desktop and mobile devices.
+Desktop Screens:
+![Screenshot 2024-04-01 174826](https://github.com/Hrithik0112/GyanGrove-Assignment/assets/122002784/793ecd3e-38de-4be6-8b56-67e43b352c79)
+![Screenshot 2024-04-01 174838](https://github.com/Hrithik0112/GyanGrove-Assignment/assets/122002784/c632168d-8b3b-443e-a653-cf3ff34e0c71)
+![Screenshot 2024-04-01 174850](https://github.com/Hrithik0112/GyanGrove-Assignment/assets/122002784/57b8d10c-1176-4a5f-8079-c1f13f217df5)
+Mobile Secreen :
+![Screenshot 2024-04-01 175044](https://github.com/Hrithik0112/GyanGrove-Assignment/assets/122002784/f603ed14-45e9-4f95-acb1-d6d96cdcb0f0)
+![Screenshot 2024-04-01 175058](https://github.com/Hrithik0112/GyanGrove-Assignment/assets/122002784/0923acdc-6bc2-4da3-94ab-543836cb199d)
+![Screenshot 2024-04-01 175107](https://github.com/Hrithik0112/GyanGrove-Assignment/assets/122002784/40c19a09-979c-4750-8edf-b1f61ccd9e6f)
+
+
 
 ## Getting Started
 
@@ -17,6 +27,9 @@ git clone https://github.com/your-username/events-website.git
 ```bash
 npm install
 ```
+> [!NOTE]  
+> Create a [dot]env[dot]local file in root directory and Paste the below Line.
+> NEXT_PUBLIC_AZURE_SECRET = FOX643kbHEAkyPbdd8nwNLkekHcL4z0hzWBGCd64Ur7mAzFuRCHeyQ
 
 ## Run
 
@@ -52,3 +65,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 - ### API Integration
   The website fetches event data from provided APIs to populate the content dynamically. This allows for real-time updates and ensures that users always have access to the latest information about upcoming and recommended events.
+
+> [!CAUTION]
+> The Website is only responsive to Devices =< 480px i.e. Moobile devices and Devices > 1240px i.e. Laptop/Desktop .
