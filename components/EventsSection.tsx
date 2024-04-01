@@ -66,13 +66,13 @@ const EventsSection = () => {
   }, [page, totalPages, loading]);
 
   return (
-    <div className="mx-36 mt-[550px] absolute ">
+    <div className="sm:mx-36 mx-14 sm:mt-[550px] mt-[520px] absolute ">
       {/* upcoming event heading */}
-      <div className="flex items-center font-medium text-xl">
+      <div className="flex items-center font-bold sm:text-xl text-lg">
         Upcoming Event <FaArrowRightLong className="ml-5" />
       </div>
       {/* the main events section */}
-      <div className="mt-14 flex flex-wrap gap-10">
+      <div className="sm:mt-14 mt-5 flex flex-wrap gap-10">
         {events.map((event, index) => (
           <EventCard upcomingevent={event} key={index} />
         ))}

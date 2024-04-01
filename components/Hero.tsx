@@ -19,7 +19,7 @@ const Hero = () => {
     speed: 2000,
     arrows: false,
     slidesToShow: 4,
-    className: "mt-10 ml-36 w-[1440px] absolute flex ",
+    className: "sm:mt-10 sm:ml-36 mt-5 ml-12 w-[1440px] absolute flex ",
   };
   useEffect(() => {
     const fetchShowData = async () => {
@@ -42,33 +42,36 @@ const Hero = () => {
   return (
     <div className="bg-[url(/Banner.svg)] bg-cover w-screen min-h-screen relative ">
       {/* Hero text */}
-      <div className="flex flex-col mx-auto space-y-5 pt-40">
+      <div className="flex flex-col sm:mx-auto mx-10  space-y-5 sm:pt-40 pt-10">
         {/* heading */}
         <div>
-          <h1 className="text-center text-white text-6xl leading-[90px] font-medium">
-            Discover Exciting Events Happening
-            <br />
+          <h1 className="text-center text-white sm:text-6xl text-2xl leading-[60px] text-wrap sm:leading-[90px] font-medium">
+            Discover Exciting Events Happening <br className="hidden sm:inline-block" />
             Near You - Stay Tuned For Updates!
           </h1>
         </div>
         {/* sun heading */}
-        <div>
-          <p className="text-center text-heading-color text-lg">
+        <div className="flex items-center justify-center">
+          <p className="text-center text-heading-color text-lg hidden sm:inline-block sm:mx-auto">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia qui hic quod facilis
             maxime?
-            <br />
+            <br className="hidden sm:inline-block" />
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo quam aliquam illo omnis!
+          </p>
+          <p className="text-lg leading-10 text-wrap sm:hidden text-center text-heading-color">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos totam repellat temporibus,
+            consequuntur iure modi.
           </p>
         </div>
       </div>
 
       {/* recommmended show section */}
-      <div className="mt-24 text-xl">
-        <div className="text-heading-color flex mx-36 justify-between">
+      <div className="sm:mt-24 mt-10 sm:text-xl text-base">
+        <div className="text-heading-color flex sm:mx-36 mx-10 justify-between">
           <p className="flex justify-center items-center font-medium">
             Recommended Shows <FaArrowRightLong className="ml-5" />
           </p>
-          <p className="underline text-lg">See all</p>
+          <p className="underline sm:text-xl text-sm">See all</p>
         </div>
       </div>
 
