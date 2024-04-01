@@ -1,7 +1,7 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaUser } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -13,39 +13,53 @@ const Header = () => {
       {/* search section  */}
       <div className="flex justify-between items-center ">
         {/* logo */}
-        <div className="text-2xl text-logo-color font-bold">BookUsNow</div>
-        <div className="flex space-x-16">
+        <div className="sm:text-2xl text-lg text-logo-color font-bold flex sm:flex-row flex-col">
+          BookUsNow
+          <div className="flex text-sm text-gray-400 justify-center items-center space-x-2 font-medium sm:hidden ">
+            <FaLocationDot className="text-gray-400" />
+            <p>Mumbai, India</p>
+            <MdKeyboardArrowRight className="text-gray-400" />
+          </div>
+        </div>
+        <div className="flex sm:space-x-16 space-x-4">
           {/* serach bar */}
           <div className="flex space-x-3">
-            <div className="flex justify-center items-center space-x-2 text-white bg-black rounded-xl px-5">
+            <div className="sm:flex justify-center items-center space-x-2 text-white bg-black rounded-xl px-5 hidden">
               <IoMenu className="w-6 h-8" />
               <div className=" bg-black font-semibold">Categories</div>
             </div>
             <div className="flex justify-between items-center border rounded-xl py-1 px-4  ">
-              <input type="search" placeholder="DJI platform" className="outline-none w-[600px]" />
+              <input
+                type="search"
+                placeholder="DJI platform"
+                className="outline-none md:w-[600px] w-[100px]"
+              />
               <BiSearch />
             </div>
           </div>
           {/* favourites */}
-          <div className="flex space-x-4">
+          <div className="flex sm:space-x-4 space-x-3">
             <div className="flex justify-center items-center space-x-4">
               <FaHeart className="text-gray-400" />
-              <p>Favourites</p>
+              <p className="sm:inline-block hidden">Favourites</p>
             </div>
-            <button className="border rounded-xl py-2 px-3">Sign in</button>
+            <button className="border rounded-xl py-2 px-3 hidden sm:flex">Sign in</button>
+            <p className="sm:hidden flex text-gray-400  items-center">
+              <FaUser />
+            </p>
           </div>
         </div>
       </div>
       {/* Categories section */}
-      <div className="flex space-x-64 mt-6">
+      <div className="flex sm:space-x-64 space-x-10 mt-3 sm:mt-6">
         {/* location */}
-        <div className="flex justify-center items-center space-x-2 font-medium">
+        <div className="sm:flex justify-center items-center space-x-2 font-medium hidden ">
           <FaLocationDot className="text-gray-400" />
           <p>Mumbai, India</p>
           <MdKeyboardArrowRight className="text-gray-400" />
         </div>
         {/* categories */}
-        <ul className="flex space-x-10">
+        <ul className="flex space-x-10 overflow-x-scroll sm:overflow-x-hidden text-sm">
           {categoryList.map((category, index) => (
             <li key={index}>{category}</li>
           ))}

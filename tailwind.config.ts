@@ -14,6 +14,9 @@ const config: Config = {
         "logo-color": "#CF2D2D",
         "border-color": "#B0BABF",
       },
+      screens: {
+        sm: "480px",
+      },
     },
   },
   plugins: [],
