@@ -28,7 +28,7 @@ git clone https://github.com/your-username/events-website.git
 npm install
 ```
 > [!NOTE]  
-> Create a [dot]env[dot]local file in root directory and Paste the below Line.
+> Create a `.env.local' file in root directory and Paste the below Line.
 > NEXT_PUBLIC_AZURE_SECRET = FOX643kbHEAkyPbdd8nwNLkekHcL4z0hzWBGCd64Ur7mAzFuRCHeyQ
 
 ## Run
