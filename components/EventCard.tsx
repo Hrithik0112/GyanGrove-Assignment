@@ -1,24 +1,35 @@
+import { UpcomingEvent } from "@/lib/types";
+import { convertMetersToKilometers, formatDate, getThumbnailUrl } from "@/lib/utils";
 import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 
-const EventCard = () => {
+const EventCard = ({ upcomingevent }: { upcomingevent: UpcomingEvent }) => {
   return (
-    <div className="w-[350px] h-[400px] flex flex-col gap-3 p-1 border-2 rounded-lg ">
-      <img
-        src="https://drive.google.com/thumbnail?id=1eCTPLcYF_u8mcAlmZ2-SN2_j-aiWA_7y&sz=w1000"
-        alt="image"
-        className="object-cover w-[300px] h-[300px] self-center rounded-lg "
-      />
+    <div className="w-[350px] h-[400px] flex flex-col border-2 rounded-lg  ">
+      <div className="relative self-center">
+        <img
+          src={getThumbnailUrl(upcomingevent.imgUrl)}
+          alt={upcomingevent.eventName}
+          className="object-cover w-[300px] h-[300px] self-center rounded-xl "
+        />
+        <div className="absolute bottom-5 bg-black bg-opacity-30 w-full">
+          <p className="text-base text-heading-color font-bold px-2">
+            {formatDate(upcomingevent.date)}
+          </p>
+        </div>
+      </div>
       <div className="flex flex-col text-base px-4 space-y-2 ">
         <div className="flex items-center">
-          <h6 className="text-lg font-medium">Winter Wonderland Fair</h6>
+          <h6 className="text-lg font-medium">{upcomingevent.eventName}</h6>
         </div>
         <div className="flex justify-between items-center">
           <div className="text-sm flex justify-center items-center space-x-2">
             <FaLocationDot className="text-gray-400" />
-            <p>West Douglas</p>
+            <p>{upcomingevent.cityName}</p>
           </div>
-          <p className="text-sm">Snowy 26C | 42 km</p>
+          <p className="text-sm">
+            {upcomingevent.weather} | {convertMetersToKilometers(upcomingevent.distanceKm)} km
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { formatDate, getThumbnailUrl } from "@/lib/utils";
+import { convertMetersToKilometers, formatDate, getThumbnailUrl } from "@/lib/utils";
 import { FaLocationDot } from "react-icons/fa6";
 import { RecommendedShow } from "@/lib/types";
 
@@ -23,7 +23,7 @@ const ShowCard = ({ show }: { show: RecommendedShow }) => {
             <p>{show.cityName}</p>
           </div>
           <p className="text-sm">
-            {show.weather} | {Math.floor(show.distanceKm)} km
+            {show.weather} | {convertMetersToKilometers(show.distanceKm)} km
           </p>
         </div>
       </div>
